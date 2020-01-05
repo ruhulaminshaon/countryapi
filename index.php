@@ -87,7 +87,7 @@ $( document ).ready(function() {
     		url:url_state,
     		data:{'country_state':country_state,'country_city':country_city,'url_state':url_state},
     		success:function(data){
-			var myh="";
+			// var myh="";
     			if(data.length>0){
     				$('#city').html('');
     				$(data).each(function(i,r){
