@@ -87,14 +87,17 @@ $( document ).ready(function() {
     		url:url_state,
     		data:{'country_state':country_state,'country_city':country_city,'url_state':url_state},
     		success:function(data){
+			var myh="";
     			if(data.length>0){
     				$('#city').html('');
     				$(data).each(function(i,r){
     					if(country_state==r.region_id){
     						$('#city').append("<option value="+r.id+">"+r.name+"</option>");
+						// myh += "<option value="+v.id+">"+v.name+"</option>";
     					}
     				});
     			}
+			// $('#city').html(myh);
     		}
     	});
 
